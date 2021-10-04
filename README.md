@@ -2,6 +2,22 @@
 Performs PCA of genotypes.  
 Works in two steps.  
   
+## 1. Input file  
+A single fasta file containing different loci, in different populations/species. Not necessarily sorted.  
+The ID (the line starting by **>**) of each sequence has to respect the following format:  
+`
+>E24_99631_p1|arabidopsis|E15|Allele_1
+NNNNNNNNNNNAAAGAAGATGGCGTCGGCAGTTTCAGTATCGTTTATTGTGGTGAATATT
+TTGCTTCTCCTGGTTCAGGTCTTTGCTGGGAGAGACTTTTACAAAATATTGGGAGTTCCC
+AGAAACGCCGATTTGAAACAAATCAAGCGATCCTATCGAAAGCTGGCCAAAGAACTCCAC
+CCAGATAAGAACAAAGATGATCCTGAAGCAGAACAAAGATTTCAAGACTTAGGTGCTGCT
+`
+Four different fields separated by a pipe (**|**), where:  
+1. first field is the locus name (**E24_99631_p1**).  
+2. second field is the species name (**arabidopsis**).  
+3. third field is the name of the sampled diploid individual (**E15**).
+4. fourth field is the name of the allele (two alleles per individual, named either **Allele_1** or **Allele_2**)  
+
 ## 1. PCA  
 Single python command line (**popphyl2PCA.py**).  
 Before, you need to have these **python** dependencies available:  
