@@ -4,7 +4,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from Bio.SeqIO import parse
 import sys
-
 import os
 
 timeStamp = sys.argv[1]
